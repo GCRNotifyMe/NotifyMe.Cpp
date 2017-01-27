@@ -70,7 +70,12 @@ int NotifyMe::sendNotificationToServer(std::string alert) {
         return -7;
     }
     
-    replaceAll(alert, "\\", "\\\\");
+    replaceAll(alert, "%", "%25");
+    replaceAll(alert, "&", "%26");
+    replaceAll(alert, "<", "%3C");
+    replaceAll(alert, ">", "%3E");
+    replaceAll(alert, "'", "%27");
+    replaceAll(alert, "\"", "%22");
     
     CURL *curl;
     CURLcode res;
@@ -92,7 +97,7 @@ int NotifyMe::sendNotificationToServer(std::string alert) {
     
     deviceString += "]";
     
-    std::string json = "{ \"token\":\"" + token + "\", \"source\":\"C++\", \"alert\":\"" + curl_easy_escape(curl, alert.c_str(), alert.size()) + "\", \"devices\":" + deviceString;
+    std::string json = "{ \"token\":\"" + token + "\", \"source\":\"C++\", \"alert\":\"" + /*curl_easy_escape(curl, */alert.c_str()/*, alert.size())*/ + "\", \"devices\":" + deviceString;
     
     if (message.size() != 0) {
         json += ", \"message\":\"" + message + "\"";

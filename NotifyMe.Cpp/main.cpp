@@ -15,6 +15,6 @@ int main(int argc, const char * argv[]) {
     NotifyMe NM = NotifyMe("wowza7125", "gabe7125");
     std::cout << NM.getUserToken() << "\n";
     NM.addDevice("all");
-    NM.sendNotification("\"");
+    NM.sendNotification("'Hello'");
     return 0;
 }
