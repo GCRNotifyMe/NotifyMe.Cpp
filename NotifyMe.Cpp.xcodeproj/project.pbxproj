@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7C3B57361E398B21002278E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B57351E398B21002278E8 /* main.cpp */; };
+		7C3B573E1E39973E002278E8 /* NotifyMe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B573D1E39973E002278E8 /* NotifyMe.cpp */; };
+		7CB6EE0E1E3BD4E500F76CCE /* libcurl.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6EE0D1E3BD4E500F76CCE /* libcurl.4.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		7C3B57321E398B1F002278E8 /* NotifyMe.Cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NotifyMe.Cpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3B57351E398B21002278E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7C3B573C1E39973E002278E8 /* NotifyMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyMe.h; sourceTree = "<group>"; };
+		7C3B573D1E39973E002278E8 /* NotifyMe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotifyMe.cpp; sourceTree = "<group>"; };
+		7CB6EE0D1E3BD4E500F76CCE /* libcurl.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.4.tbd; path = usr/lib/libcurl.4.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB6EE0E1E3BD4E500F76CCE /* libcurl.4.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				7C3B57341E398B1F002278E8 /* NotifyMe.Cpp */,
 				7C3B57331E398B1F002278E8 /* Products */,
+				7CB6EE0C1E3BD4E500F76CCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				7C3B57351E398B21002278E8 /* main.cpp */,
+				7C3B573C1E39973E002278E8 /* NotifyMe.h */,
+				7C3B573D1E39973E002278E8 /* NotifyMe.cpp */,
 			);
 			path = NotifyMe.Cpp;
+			sourceTree = "<group>";
+		};
+		7CB6EE0C1E3BD4E500F76CCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CB6EE0D1E3BD4E500F76CCE /* libcurl.4.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3B573E1E39973E002278E8 /* NotifyMe.cpp in Sources */,
 				7C3B57361E398B21002278E8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +269,7 @@
 				7C3B573B1E398B21002278E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
